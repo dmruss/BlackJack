@@ -71,6 +71,19 @@ int main() {
 					break;
 				case 's':
 					cout << "You choose to stay" << endl;
+					aPlayer->sumCards();
+					cout << "Your ";
+					aPlayer->printSum();
+					cout << "Dealer ";
+					dealer->sumCards();
+					dealer->printSum();
+					if (dealer->getSum() > aPlayer->getSum()) {
+						cout << "Dealer wins." << endl;
+					}else {
+						cout << "You win!" << endl;
+					}
+					gameOver = true;
+					break;
 				case 'q':
 					cout << "Goodbye" << endl;
 					gameOver = true;
